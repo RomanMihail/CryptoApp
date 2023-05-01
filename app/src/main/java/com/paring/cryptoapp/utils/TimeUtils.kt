@@ -6,7 +6,7 @@ import java.util.*
 
 fun convertTimestampToTime(timestamp: Int?): String{
     if (timestamp == null) return ""
-    val stamp = Timestamp((timestamp * 1000L))
+    val stamp = Timestamp((timestamp.toLong() * 1000))
     val date = Date (stamp.time)
     val pattern = "HH:mm:ss"
     val sdf = SimpleDateFormat(pattern, Locale.getDefault())
